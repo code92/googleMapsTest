@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<title>Google Maps API v3 Example : Live Traffic Layer</title>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+</script>    
+
+</head>
+
+<body onload="initialize()">
+
+<script src="isoMap.js"></script>
+
+<div id="map" style="width: 530px; height: 230px" >   
+
+</div>
+    <div id = "outputDiv"> <p> </p>
+    </div>
+<div id = "panel">
+    <p>Locate Marker</p>
+    <input id="address" type = "textbox" value = "banglore, india">
+    <input type="button" value="Go" onclick = "codeAddress()">    
+    <p>Time</p>
+    <input id = "time" type = "textbox" value = "0">min
+    <input type = "button" value = "GO" onclick="makeIsochrone()">
+        
+    </div>
+</div>
+
+<div id = "panel2">
+            <input type="button" value="By Drive" onclick="calculateDistancesDrive()">
+            <input type="button" value="By Walk" onclick="calculateDistancesWalk()">
+</div>   
+
+</body>
+</html>
