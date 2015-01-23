@@ -15,10 +15,10 @@ var flag;
 var array = [];
 function initialize()
 {
-
-    geocoder = new google.maps.Geocoder();
-    geocoder = new google.maps.Geocoder();
     
+    geocoder = new google.maps.Geocoder();
+    geocoder = new google.maps.Geocoder();
+    //change in file
     var pos = new google.maps.LatLng(34.04924594193164, -118.24104309082031);  
     map = new google.maps.Map(document.getElementById("map"),
     {
