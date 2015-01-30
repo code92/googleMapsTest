@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title>Google Maps API v3 Example : Live Traffic Layer!!</title>
+<title>Google Maps API v3 Example : Live Traffic Layer</title>
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
@@ -13,8 +13,11 @@
 <body onload="initialize()">
 
 <script src="isoMap.js"></script>
+<script src="isoMap1.js"></script>
+<script src="circleTypes.js"></script>
+<script src="fillCircle.js"></script>
 
-<div id="map" style="width: 530px; height: 230px" >   
+<div id="map" style="width: 630px; height: 330px" >   
 
 </div>
     <div id = "outputDiv"> <p> </p>
@@ -26,7 +29,10 @@
     <p>Time</p>
     <input id = "time" type = "textbox" value = "0">min
     <input type = "button" value = "GO" onclick="makeIsochrone()">
-        
+     <p>Draw Polygon<p>
+     <input type = "button" value =" Go" onclick="drawPolygon()">   
+     <p>calculate distance per unit of time<p>
+        <input type = "button" value= "Go" onclick = "calculateTimePerUnit()">
     </div>
 </div>
 
