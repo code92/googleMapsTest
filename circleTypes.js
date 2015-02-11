@@ -1,17 +1,18 @@
 var circle10 = [];
 var d = [];var j = 0;
+ var r = 125;r
 function addCircle5(){
-  
+
   a5.push(destination);
   var circleOption = {
       strokeColor: '#FF0000',
       strokeOpacity: 0.1,
       strokeWeight: 0,
-      fillColor: '#00FF00',
-      fillOpacity: 0.8,
+      fillColor: '#66CC00',
+      fillOpacity: 0.3,
       map: map,
       center: destination,
-      radius: 300
+      radius: r/4
   };
   var cityCircle5 = new google.maps.Circle(circleOption);
   addWindow5(cityCircle5); 
@@ -41,7 +42,7 @@ function addCircle10(){
       fillOpacity: 0.5,
       map: map,
       center: destination,
-      radius: 400
+      radius: r
   };
 
   var cityCircle10 = new google.maps.Circle(circleOption);
@@ -71,10 +72,10 @@ function addCircle15(){
       strokeOpacity: 0.1,
       strokeWeight: 0,
       fillColor: '#00FF00',
-      fillOpacity: 0.3,
+      fillOpacity: 0.2,
       map: map,
       center: destination,
-      radius: 600
+      radius: r
   }; 
 
  var cityCircle15 = new google.maps.Circle(circleOption);
@@ -95,49 +96,18 @@ function addWindow15(cityCircle15){
   })
 }
 
-function addCircle20(){
-  a20.push(destination);
-
+function addCircle25(){
+  a25.push(destination);
   var circleOption = {
       strokeColor: '#FF0000',
       strokeOpacity: 0.1,
 
       strokeWeight: 0,
       fillColor: '#7CFC00',
-      fillOpacity: 0.8,
+      fillOpacity: 0.3,
       map: map,
       center: destination,
-      radius: 600
-  };
-  var cityCircle20 = new google.maps.Circle(circleOption);
-  addWindow20(cityCircle20);
-}
-
-function addWindow20(cityCircle20){
-  var infowindow = new google.maps.InfoWindow({
-      content: "15-20 mins",
-      position: cityCircle20.center
-  });
-    google.maps.event.addListener(cityCircle20, 'mouseover', function(event) {
-    infowindow.open(map);
-  })
-    google.maps.event.addListener(cityCircle20, 'mouseout', function(event) {
-    infowindow.close();
-  })
-}
-
-function addCircle25(){
-  a25.push(destination);
-
-  var circleOption = {
-      strokeColor: '#FF0000',
-      strokeOpacity: 0.1,
-      strokeWeight: 0,
-      fillColor: '#9ACD32',
-      fillOpacity: 0.8,
-      map: map,
-      center: destination,
-      radius: 700
+      radius: r
   };
   var cityCircle25 = new google.maps.Circle(circleOption);
   addWindow25(cityCircle25);
@@ -145,7 +115,7 @@ function addCircle25(){
 
 function addWindow25(cityCircle25){
   var infowindow = new google.maps.InfoWindow({
-      content: "20-25 mins",
+      content: "15-25 mins" ,
       position: cityCircle25.center
   });
     google.maps.event.addListener(cityCircle25, 'mouseover', function(event) {
@@ -156,48 +126,17 @@ function addWindow25(cityCircle25){
   })
 }
 
-function addCircle30(){
-  a30.push(destination);
-
-  var circleOption = {
-      strokeColor: '#FF0000',
-      strokeOpacity: 0.1,
-      strokeWeight: 0,
-      fillColor: '#DAA520',
-      fillOpacity: 0.8,
-      map: map,
-      center: destination,
-      radius: 800
-  };
-  var cityCircle30 = new google.maps.Circle(circleOption);
-  addWindow30(cityCircle30);
-}
-
-function addWindow30(cityCircle30){
-  var infowindow = new google.maps.InfoWindow({
-      content: "25-30 mins",
-      position: cityCircle30.center
-  });
-    google.maps.event.addListener(cityCircle30, 'mouseover', function(event) {
-    infowindow.open(map);
-  })
-    google.maps.event.addListener(cityCircle30, 'mouseout', function(event) {
-    infowindow.close();
-  })
-}
-
 function addCircle35(){
   a35.push(destination);
-
   var circleOption = {
       strokeColor: '#FF0000',
       strokeOpacity: 0.1,
       strokeWeight: 0,
-      fillColor: '#ffA500',
-      fillOpacity: 0.5,
+      fillColor: '#9ACD32',
+      fillOpacity: 0.2,
       map: map,
       center: destination,
-      radius: 900
+      radius: r
   };
   var cityCircle35 = new google.maps.Circle(circleOption);
   addWindow35(cityCircle35);
@@ -205,7 +144,7 @@ function addCircle35(){
 
 function addWindow35(cityCircle35){
   var infowindow = new google.maps.InfoWindow({
-      content: "30-35 mins",
+      content: "25-35 mins" ,
       position: cityCircle35.center
   });
     google.maps.event.addListener(cityCircle35, 'mouseover', function(event) {
@@ -216,7 +155,68 @@ function addWindow35(cityCircle35){
   })
 }
 
+function addCircle45(){
+  a45.push(destination);
 
+  var circleOption = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.1,
+      strokeWeight: 0,
+      fillColor: '#DAA520',
+      fillOpacity: 0.3,
+      map: map,
+      center: destination,
+      radius: r
+  };
+ var cityCircle45 = new google.maps.Circle(circleOption);
+  addWindow45(cityCircle45);
+}
+
+function addWindow45(cityCircle45){
+  var infowindow = new google.maps.InfoWindow({
+      content: "35-45 mins",
+      position: cityCircle45.center
+  });
+    google.maps.event.addListener(cityCircle45, 'mouseover', function(event) {
+    infowindow.open(map);
+  });
+    google.maps.event.addListener(cityCircle45, 'mouseout', function(event) {
+    infowindow.close();
+  })
+}
+
+function addCircle60(){
+  a60.push(destination);
+   console.log("a60 " +a60[0].lat());
+ 
+  var circleOption = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.1,
+      strokeWeight: 0,
+      fillColor: '#ffA500',
+      fillOpacity: 0.5,
+      map: map,
+      center: destination,
+      radius: r
+  };
+  var cityCircle60 = new google.maps.Circle(circleOption);
+  addWindow60(cityCircle60);
+}
+
+function addWindow60(cityCircle60){
+  var infowindow = new google.maps.InfoWindow({
+      content: "45-60 mins",
+      position: cityCircle60.center
+  });
+    google.maps.event.addListener(cityCircle60, 'mouseover', function(event) {
+    infowindow.open(map);
+  });
+    google.maps.event.addListener(cityCircle60, 'mouseout', function(event) {
+    infowindow.close();
+  })
+}
+
+/*
 function addCircle40(){
   a40.push(destination);
 
@@ -228,10 +228,10 @@ function addCircle40(){
       fillOpacity: 0.8,
       map: map,
       center: destination,
-      radius: 1000
+      radius: r
   };
 
-var cityCircle40 = new google.maps.Circle(circleOption);
+ var cityCircle40 = new google.maps.Circle(circleOption);
   addWindow40(cityCircle40);
 }
 
@@ -260,7 +260,7 @@ function addCircle45(){
       fillOpacity: 0.8,
       map: map,
       center: destination,
-      radius: 1100
+      radius: r
   };
   var cityCircle45 = new google.maps.Circle(circleOption);
   addWindow45(cityCircle45);
@@ -270,7 +270,20 @@ function addWindow45(cityCircle45){
   var infowindow = new google.maps.InfoWindow({
       content: "40-45 mins",
       position: cityCircle45.center
+  });function addPolygon20(){
+
+  poly = new google.maps.Polygon({
+    path: a20,
+    strokeColor: '#FF0000',
+      strokeOpacity: 0.1,
+      strokeWeight: 0,
+      fillColor: '#7CFC00',
+      fillOpacity: 0.3,
   });
+  poly.setMap(map);
+// addPolygon5();
+}
+
     google.maps.event.addListener(cityCircle45, 'mouseover', function(event) {
     infowindow.open(map);
   })
@@ -291,7 +304,7 @@ function addCircle50(){
       fillOpacity: 0.6,
       map: map,
       center: destination,
-      radius: 1200
+      radius: r
   };
   var cityCircle50 = new google.maps.Circle(circleOption);
   addWindow50(cityCircle50);
@@ -310,10 +323,9 @@ function addWindow50(cityCircle50){
   })
 }
 
-
 function addCircle55(){
+  
   a55.push(destination);
-
   var circleOption = {
       strokeColor: '#FF0000',
       strokeOpacity: 0.1,
@@ -322,7 +334,7 @@ function addCircle55(){
       fillOpacity: 0.6,
       map: map,
       center: destination,
-      radius: 1200
+      radius: r
   };
   var cityCircle55 = new google.maps.Circle(circleOption);
   addWindow55(cityCircle55);
@@ -353,7 +365,7 @@ function addCircle60(){
       fillOpacity: 0.8,
       map: map,
       center: destination,
-      radius: 1250
+      radius: r
   };
 
  var cityCircle60 = new google.maps.Circle(circleOption);
@@ -372,4 +384,4 @@ function addWindow60(cityCircle60){
     infowindow.close();
   })
 }
- 
+ */
